@@ -7,7 +7,7 @@ spec:
   project: argocd
   source:
     repoURL: git@github.com:paulbrittain/argocd.git
-    path: nginx
+    path: configurations/nginx
     targetRevision: HEAD
   destination:
     server: https://192.168.178.89:6443
