@@ -6,7 +6,7 @@ metadata:
 spec:
   project: default
   source:
-    repoURL: 'https://your-git-repo.git'
+    repoURL: git@github.com:paulbrittain/argocd.git
     targetRevision: HEAD
     path: . # Indicates the root directory of the Git repository
   destination:
