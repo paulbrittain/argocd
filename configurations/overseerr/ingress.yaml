@@ -1,0 +1,18 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: overseerr-ingress
+  namespace: core
+annotations:
+  nginx.ingress.kubernetes.io/use-regex: "true"
+spec:
+  rules:
+  - http:
+      paths:
+      - path: /overseerr(/|$)(.*)
+        pathType: Prefix
+        backend:
+          service:
+            name: overseerr-service  # Replace with Overseerr's service name
+            port:
+              number: 5055  # Replace with the port Overseerr is serving on
