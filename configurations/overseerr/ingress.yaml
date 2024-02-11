@@ -8,14 +8,7 @@ spec:
   rules:
   - http:
       paths:
-      - path: /overseerr
-        pathType: Prefix
-        backend:
-          service:
-            name: overseerr
-            port:
-              number: 80
-      - path: /login
+      - path: /
         pathType: Prefix
         backend:
           service:
