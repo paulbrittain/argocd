@@ -13,6 +13,6 @@ spec:
         pathType: Prefix
         backend:
           service:
-            name: overseerr-service  # Replace with Overseerr's service name
+            name: overseerr
             port:
-              number: 5055  # Replace with the port Overseerr is serving on
+              number: 5055
