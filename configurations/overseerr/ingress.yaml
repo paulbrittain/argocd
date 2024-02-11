@@ -8,7 +8,7 @@ spec:
   rules:
   - http:
       paths:
-      - path: /overseerr
+      - path: /overseerr(/|$)(.*)
         pathType: Prefix
         backend:
           service:
