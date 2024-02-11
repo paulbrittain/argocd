@@ -22,3 +22,10 @@ nano /etc/fstab
 
 mount -a
 ```
+
+# To revert the mounting changes
+
+```shell
+rmdir /mnt/nas
+umount /mnt/nas
+```
