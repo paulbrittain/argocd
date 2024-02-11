@@ -4,6 +4,7 @@ metadata:
   name: overseerr-ingress-local
   namespace: core
 spec:
+  ingressClassName: nginx
   rules:
   - http:
       paths:
