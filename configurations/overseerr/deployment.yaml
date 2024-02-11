@@ -17,6 +17,9 @@ spec:
         image: ghcr.io/sct/overseerr:5c60ffc567df3500f9435603a15fd10fa3e038f8
         ports:
         - containerPort: 5055
+        volumeMounts:
+        - name: config-volume
+          mountPath: /app/config
         resources:
           requests:
             memory: "128Mi"
@@ -24,3 +27,7 @@ spec:
           limits:
             memory: "256Mi"
             cpu: "500m"
+      volumes:
+      - name: config-volume
+        persistentVolumeClaim:
+          claimName: overseerr-config
