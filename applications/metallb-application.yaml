@@ -1,14 +1,13 @@
-# Run this command to install the nginx controller: kubectl apply -f https://raw.githubusercontent.com/kubernetes/ingress-nginx/controller-v1.0.0/deploy/static/provider/baremetal/deploy.yaml
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: nginx-application
+  name: metallb-application
   namespace: argocd
 spec:
   project: default
   source:
     repoURL: git@github.com:paulbrittain/argocd.git
-    path: configurations/nginx
+    path: configurations/metallb
     targetRevision: HEAD
   destination:
     server: https://192.168.178.89:6443
